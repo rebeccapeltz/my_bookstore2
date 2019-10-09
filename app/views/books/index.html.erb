@@ -1,0 +1,22 @@
+<h1>All Books</h1>
+
+<%= link_to "Add a new book", new_book_path%>
+<% @books.each do |book| %>
+<%
+if book.image
+    image = Cloudinary::PreloadedFile.new book.image
+    public_id = image.public_id
+    version = image.version
+end
+%>
+    <h3><%= link_to book.title, book %></h3>
+    <p><%= book.description %></p>
+    <p>
+        <%= cl_image_tag(public_id, width:50, height:50, crop: "fill",radius: "max",version:version) if book.image %>
+    </p>
+    <hr>
+<% end %>
+
+
+
+

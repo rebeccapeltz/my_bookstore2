@@ -1,0 +1,35 @@
+<%= cloudinary_js_config %>
+<%= form_for @book do |f| %>
+<p>
+<%= f.label :title %><br>
+<%= f.text_field :title %>
+</p>
+<p>
+<%= f.label :description %><br>
+<%= f.text_area :description %>
+</p>
+<p>
+<%= f.label :image %><br>
+<%= f.cl_image_upload :image, html: {id: 'qwe'} %>
+</p>
+<p id="thumbnail"></p>
+<%= f.submit %>
+<% end %>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  if($.fn.cloudinary_fileupload !== undefined) {
+    $("input.cloudinary-fileupload[type=file]").cloudinary_fileupload()
+    .on('cloudinarydone',function(error, data){
+        console.log('cloudinarydone')
+        console.log(data.result.public_id)
+        $('#thumbnail').append($.cloudinary.image(data.result.public_id,{width:100, height:100, crop:"fill",gravity:"auto"}))
+    });
+  }
+});
+
+// $('.cloudinary_fileupload').cloudinary_fileupload()
+// .on('cloudinarydone',function(error, data){
+//     console.log('cloudinarydone')
+// });
+</script>

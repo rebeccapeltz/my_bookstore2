@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: pictures77
+  api_key: '248411532346962'
+  api_secret: AiaqU-qSnwZG_LR2L2y_A6hrCqo
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: pictures77
+  api_key: '248411532346962'
+  api_secret: AiaqU-qSnwZG_LR2L2y_A6hrCqo
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: pictures77
+  api_key: '248411532346962'
+  api_secret: AiaqU-qSnwZG_LR2L2y_A6hrCqo
+  enhance_image_tag: true
+  static_file_support: false

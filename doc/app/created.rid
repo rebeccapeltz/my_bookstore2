@@ -1,0 +1,7 @@
+Fri, 04 Oct 2019 17:15:02 -0700
+README.rdoc	Fri, 04 Oct 2019 16:39:19 -0700
+app/controllers/application_controller.rb	Fri, 04 Oct 2019 11:37:20 -0700
+app/controllers/books_controller.rb	Fri, 04 Oct 2019 17:04:10 -0700
+app/helpers/application_helper.rb	Fri, 04 Oct 2019 11:37:20 -0700
+app/helpers/books_helper.rb	Fri, 04 Oct 2019 11:57:07 -0700
+app/models/book.rb	Fri, 04 Oct 2019 12:34:02 -0700
